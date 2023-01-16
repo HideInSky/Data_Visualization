@@ -1,0 +1,55 @@
+Data Visualization Final Team Project
+
+CS639
+
+Names
+Yucheng Lin
+Parker Swanson
+Aaron MacDonald
+Connor Flint
+
+Team 4 Final Project
+
+URL: https://parkerswanson19.github.io/Final_Project/index.html 
+
+Description with storyboards from the original proposal
+
+When our group first met, we realized that we were all passionate about nutrition. Nutrition is a discipline that is heavily tracked and as a result we had access to a lot of public information. We found this dataset, which contains 7000 different types of food and all of their nutritional information. We believed that this was a great place to start given the abundance of detail on each food. Nutrition is an area of study that involves lots of numbers and scientific terminology which can be difficult for the lay user to decipher. We want our users to be able to interpret this data in a meaningful way. Thus, we plan on making an interactive visualization based around something that most people are comfortable with: the food pyramid. 
+In our food pyramid, we will have bubbles that will represent different food items. When you hover over a bubble, a popup will appear displaying the nutritional breakdown. We will also have a dropdown to select different nutrients and a slider to adjust the value range of that nutrient. As you adjust this sliding range, the food pyramid will adjust and only display the bubbles that are within this range. By filtering foods by the filters one selects, the foods that remain can be contrasted from the large amount of initial foods and one can get a better view of the foods in the nutrient range that one desires.
+
+
+
+
+	
+Description of final interactive visualization
+
+The main goal of our visualization was to inform the user about their dietary habits and how they can make improvements. To reduce the cognitive load on the user, our final visualization started with an image that everyone who went to public school in America is familiar with: “My Plate”. “My Plate” is the most up-to-date dietary guidelines released by the United States government. The plate is purposely designed not to be exact, but instead uses visual cues to give the user ideas about how much of each food group they should eat.
+	When you click on one of the specific food groups, you will see a circular packing graph for each food group. Each node in the graph is a specific food. The area of each node corresponds to the number of calories in one serving of the food. A calorie is a unit of energy that is commonly accepted as the best method to keep track of how much food to eat. We kept each food group, which is a nominal variable, encoded with the same color as the “My Plate” to keep the visualization consistent.
+	The nodes have gravity built in so the user is able to move the individual data points around. We were inspired by personal visualizations and wanted the user to be able to organize how often they eat certain foods. By moving foods around, they can see how their diet will change based on small changes. Another interaction technique we used was selection. When a data point is highlighted, the user can get more detailed information about each food. If a user was trying to do a low fat diet for example, they could try to find low fat foods that they want to eat in the future.
+
+
+Changes between storyboard and final visualization
+“Food pyramid” to “My Plate”. At first, we wanted to make a food pyramid that contains different categories of foods, but there were few useful codes for rendering a pyramid in d3. We then turned to look for a new navigation page that could replace the function of the pyramid. During searching, we found a perfect alternative, which was the food plate. In the final visualization, we used the food plate as the homepage that could be directed to five different category foods.
+Delete the “filter and slide” function. In the proposal, we imagined there was a dropdown to select different nutrients and a slider to adjust the value range of that nutrient. However, it was hard to achieve after we really started to code.
+Add the “categorize” function. We added a function that allows the users to freely move the food nodes based on gravity and categorize them to either “never eat”, “sometimes eat”, or “always eat”. This function acts as an interactive visualization for users to create their own bundles of food and balance their diets according to the amount of fat, proteins, sugars, and etc. 
+Added sizes of bubbles proportional to the calories count. This function allows for calories to be more easily seen in proportion to other foods within the food group. This makes it easier for the viewer to compare between the foods within a group and adds a layer of depth.	
+Delete having the foods listed within their respective bubbles. Feasibility was examined but with the length of some food names and the size of the bubbles, fitting the food names consistently would not be easily done. We wanted to have the names of the foods based on peer feedback and our own personal desires but due to the way the physics and the nodes interacted, the solution would be very time consuming considering our collective unfamiliarity with D3.
+
+
+Work breakdown
+
+For our project, there were two main components that needed to be worked on. One was gathering, cleaning and formatting the data, which Jim and Parker worked on. The second was actually creating the visualization, which Aaron and Connor worked on. 
+
+Starting off, we all spent around 4 hours collaborating and brainstorming to figure out what we wanted to base our visualization around and what we wanted it to look like. 
+
+Parker: I spent around 1 hour finding a dataset that aligned with our goals. I also spent around 1 hour helping Jim find the most common foods and filter our data. I also spent around 1-2 hours creating a script in Python to apply these filters to our data and also format it correctly.
+
+Yucheng: Spent 1 hour helping Connor create the Github repository and branches. Spent 2 hours filtering the most common foods from the dataset and filter data with Parker through Python. Spent 1 hour helping Aaron improve the aesthetic of visualization pages and adapt the color of visualizations to corresponding homepage color.
+
+Aaron: Found code that resembled what we wanted for our project and adapted the code to work with our data. The code in question was working with bubbles to create a bubble graph with tooltips that popped up when a bubble was hovered over along with physics to move the bubbles when dragged. In addition, I worked on creating and refining the pages to look more aesthetically appealing and present the data better.
+
+Connor: I first created the Github repository which took about 2 hours. This involved creating the project, creating branches, and making sure that everyone was able to commit changes to the repository. I spent another 2 hours setting up the page navigation to connect the food plate diagram to each of the respective visualizations.
+
+TODO: The bundled source code for your application, uploaded as a file (either a .zip or .tar.gz archive). Please ensure that the software submitted is in working order. If any special instructions are needed for building or running your software, please provide them.
+
+
